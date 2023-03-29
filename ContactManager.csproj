@@ -6,4 +6,19 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'https' " />
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.5" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="4.4.0" />
+    <PackageReference Include="Microsoft.CodeAnalysis.VisualBasic.Workspaces" Version="4.4.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Views\Contact\" />
+    <None Remove="TagHelpers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Contact\" />
+    <Folder Include="TagHelpers\" />
+  </ItemGroup>
 </Project>

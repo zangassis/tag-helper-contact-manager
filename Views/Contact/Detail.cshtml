@@ -38,11 +38,10 @@
         <dd class="col-sm-10">
             <label>@Model.Address</label>
         </dd>
-        <address>
-            <strong>Support:</strong><email mail-to="Support"></email><br />
-            <strong>Marketing:</strong><email mail-to="Marketing"></email>
-        </address>
-
     </dl>
+    <strong>Support: </strong><email mail-to="support"></email><br />
+    <strong>Marketing: </strong><email mail-to="marketing"></email>
+    <br />
+    <a asp-controller="Contact" asp-action="Index">All contacts</a>
 
 </div>
